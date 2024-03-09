@@ -6,7 +6,7 @@ class RedisClient {
     this.client = redis.createClient();
     this.client.on('error', (err) => console.log(err.message));
     // this.client.on("connect", () =>
-    //   console.log("Redis client is connected to the server on 127.0.0.1:27017")
+    //   console.log("Redis client is connected to the server on 127.0.0.1:6379")
     // );
     this.client.promisifiedGet = util
       .promisify(this.client.get)
